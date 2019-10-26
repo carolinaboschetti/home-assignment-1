@@ -53,6 +53,7 @@ header {
     .header {
         grid-template-areas: 
             'logo . icons';
+        grid-template-rows: 1fr;
         grid-template-columns: auto 1fr auto;
         padding: 20px;
     }
