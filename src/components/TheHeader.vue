@@ -28,8 +28,8 @@ header {
     background-color: #ee2961;
     border-radius: 50%;
     padding: 8px;
-    min-width: 35px;
-    min-height: 35px;
+    min-width: 25px;
+    min-height: 25px;
     display: inline-flex;
     justify-content: center;
     margin: 0 3px;
