@@ -6,6 +6,7 @@
     </div> -->
     <the-header />
     <router-view />
+    <footer />
   </div>
 </template>
 <script>
