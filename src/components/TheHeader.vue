@@ -3,8 +3,8 @@
         <router-link to='/'><img class="logo" src="../assets/cupcakesandcookies.png" alt="Cupcakes and Cookies logo"></router-link>
         <div class="menu">
             <router-link class="link-icon" to="/"><img src="../assets/house.png" alt="House"></router-link>
-            <router-link class="link-icon" to="/"><img src="../assets/compass-arrow.png" alt="Compass"></router-link>
-            <router-link class="link-icon" to="/"><img src="../assets/file.png" alt="File"></router-link>
+            <router-link class="link-icon" to="/about"><img src="../assets/compass-arrow.png" alt="Compass"></router-link>
+            <router-link class="link-icon" to="/recipes"><img src="../assets/file.png" alt="File"></router-link>
             <router-link class="link-icon" to="/"><img src="../assets/question-mark.png" alt="Question-mark"></router-link>
             <router-link class="link-icon" to="/"><img src="../assets/person.png" alt="Person"></router-link>
         </div>
