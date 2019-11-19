@@ -1,8 +1,43 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="title">Conheça algumas opções de doces</h1>
+        <div class="options">
+            <div class="optionx">
+                <h2>Opção X</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!</p>
+                <ul class="list">
+                    <li>Candy canes cheesecake;</li>
+                    <li>Apple pie wafer;</li>
+                    <li>Tiramisu cupcake;</li>
+                    <li>Lemon drops faworki;</li>
+                </ul>
+                <button>Veja Mais</button>
+            </div>
+            <div class="optiony">
+                <h2>Opção Y</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!</p>
+                <ul class="list">
+                    <li>Tootsie roll cheesecake;</li>
+                    <li>Chupa Chups wafer;</li>
+                    <li>Danish marzipan;</li>
+                </ul>
+                <button>Veja Mais</button>
+            </div>
+            <div class="optionz">
+                <h2>Opção Z</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!</p>
+                <ul class="list">
+                    <li>Chocolate marzipan jelly;</li>
+                    <li>Sweet lollipop ice cream;</li>
+                    <li>Soufflé jelly-o bear claw sweet;</li>
+                    <li>Brownie pie gummi bears;</li>
+                    <li>Jelly beans dragée;</li>
+                </ul>
+                <button>Veja Mais</button>
+            </div> 
+        </div>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br />
+      Conheça algumas opções de doces<br />
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
         >vue-cli documentation</a
