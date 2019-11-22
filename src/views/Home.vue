@@ -64,6 +64,7 @@ body > * {
 h1 {
     color: #ee2961;
     padding: 10px 0;
+    text-align: center;
 }
 h2{
     color: #ee2961;
