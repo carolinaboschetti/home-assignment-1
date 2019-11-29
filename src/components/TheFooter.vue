@@ -1,6 +1,5 @@
 <template>
   <footer class="footer">
-        <router-link to='/'><img class="logo" src="../assets/cupcakesandcookies.png" alt="Cupcakes and Cookies logo"></router-link>
         <div class="menu">
             <router-link class="link-icon" to="/"><img src="../assets/heart.png" alt="Heart"></router-link>
             <router-link class="link-icon" to="/"><img src="../assets/twitter.png" alt="Twitter"></router-link>
@@ -19,16 +18,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 .footer {
     display: grid;
+    background-color: #ee2961;
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
-    padding: 10px;
-}
-.logo {
-    margin: 0;
 }
 .menu {
     width: 100%;
@@ -48,13 +42,9 @@ footer {
     //desktop
     .header {
         grid-template-areas: 
-            'logo . icons';
+            'icons';
         grid-template-rows: 1fr;
         grid-template-columns: auto 1fr auto;
-        padding: 20px;
-    }
-    .logo {
-        grid-area: logo;
     }
     .menu {
         grid-area: icons;

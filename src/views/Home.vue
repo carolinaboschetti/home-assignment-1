@@ -1,40 +1,8 @@
-<template>
+<template>   
     <div class="hello">
     <h1 class="title">Conheça algumas opções de doces</h1>
         <div class="options">
-            <div class="optionx">
-                <h2>Opção X</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!</p>
-                <ul class="list">
-                    <li>Candy canes cheesecake;</li>
-                    <li>Apple pie wafer;</li>
-                    <li>Tiramisu cupcake;</li>
-                    <li>Lemon drops faworki;</li>
-                </ul>
-                <button>Veja Mais</button>
-            </div>
-            <div class="optiony">
-                <h2>Opção Y</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!</p>
-                <ul class="list">
-                    <li>Tootsie roll cheesecake;</li>
-                    <li>Chupa Chups wafer;</li>
-                    <li>Danish marzipan;</li>
-                </ul>
-                <button>Veja Mais</button>
-            </div>
-            <div class="optionz">
-                <h2>Opção Z</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!</p>
-                <ul class="list">
-                    <li>Chocolate marzipan jelly;</li>
-                    <li>Sweet lollipop ice cream;</li>
-                    <li>Soufflé jelly-o bear claw sweet;</li>
-                    <li>Brownie pie gummi bears;</li>
-                    <li>Jelly beans dragée;</li>
-                </ul>
-                <button>Veja Mais</button>
-            </div> 
+            <Cupcake v-for="(cupcake, i) in cupcakes" :key="i" :cupcake="cupcake" />
         </div>
          <div>
             <button>Faça um teste!</button>
@@ -44,10 +12,50 @@
 </template>
 
 <script>
+import Cupcake from '@/components/Cupcake.vue'
 // @ is an alias to /src
 
 export default {
-  name: "home",
+    name: "home",
+    components: {
+        Cupcake
+    },
+    data() {
+        return {
+            cupcakes: [
+                {
+                    title: 'Opção X',
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!',
+                    stuff: [
+                        'Candy canes cheesecake',
+                        'Apple pie wafer',
+                        'Tiramisu cupcake',
+                        'Lemon drops faworki'
+                    ]
+                },
+                {
+                    title: 'Opção Y',
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!',
+                    stuff: [
+                        'Tootsie roll cheesecake',
+                        'Chupa Chups wafer',
+                        'Danish marzipan'
+                    ]
+                },
+                {
+                    title: 'Opção Z',
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quaerat cupiditate quibusdam ipsam beatae. Numquam culpa explicabo sunt deserunt, assumenda, nesciunt possimus quasi in voluptates expedita, repellendus ea odit reprehenderit!',
+                    stuff: [
+                        'Chocolate marzipan jelly',
+                        'Sweet lollipop ice cream',
+                        'Soufflé jelly-o bear claw sweet',
+                        'Brownie pie gummi bears',
+                        'Jelly beans dragée'
+                    ]
+                }
+            ]
+        }
+    }
 };
 </script>
 
