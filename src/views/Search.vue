@@ -1,8 +1,12 @@
 <template>
   <main class="search">
-    <search-field />
+    <search-field 
+      @search="getSearchResults"
+    
+    
+    />
     <section class="search-results">
-      <search-result-item v-for="result in results" :key="result.uri" :image="result.image" :title="result.label" :health-labels="result.healthLabels" :servings="result.yeld" />
+      <search-result-item v-for="result in results" :key="results.uri" :image="results.image" :title="results..label" :health-labels="results.healthLabels" :servings="results.yield" />
     </section>
   </main>
 </template>
@@ -20,36 +24,34 @@ import SearchResultItem from '@/components/SearchResultItem'
       return {
         results: [
           {
-            image: 'cupcakesandcookies.png',
-            label: 'Chocolate Cupckacke',
-            yeld: 2, // servings
-            calories: 2,
-            healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-          },
-          {
-            image: 'cupcakesandcookies.png',
-            label: 'Chocolate Cupckacke',
-            yeld: 2, // servings
-            calories: 2,
-            healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
-          },
-          {
-            image: 'cupcakesandcookies.png',
-            label: 'Chocolate Cupckacke',
-            yeld: 2, // servings
-            calories: 2,
-            healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free'],
+            recipe: {
+              image: 'cupcakesandcookies.png',
+              label: 'Chocolate Cupckacke',
+              yield: 2, // servings
+              calories: 2,
+              uri:'',
+              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free']
+            }
           }
         ]
       }
     },
-    beforeCreate(){
-        console.log('APP Key', process.env)
-    },
-    mounted (){
-      console.log(this.$http)
+   
+    methods: {
+      getSearchResults (searchText) {
+        this.$axios.get('/search', {
+          params: {
+            q: searchText
+          }
+
+        }).then(function(response){
+          console.log(response.data)
+          if(response.data && response.data.length > 0) this.results = response.data
+        })
+    }
     }
   }
+    
 </script>
 
 <style lang="scss" scoped>
